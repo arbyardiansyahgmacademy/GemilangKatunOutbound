@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" style="scroll-behavior: smooth;">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog & Artikel Outbound Malang Batu | GemilangKatunOutbond</title>
   <link rel="icon" type="image/png" href="/assets/images/logoo.webp" />
-  
+
   <meta name="description" content="Kumpulan artikel, tips, dan panduan wisata outbound Malang Batu dari GemilangKatunOutbond. Rekomendasi lokasi, harga, dan ide team building." />
   <meta name="keywords" content="gemilangkatunoutbond, blog outbound malang, tips team building malang, panduan wisata batu malang" />
   <link rel="canonical" href="https://gemilangkatunoutbond.co.id/blog.html" />
@@ -17,16 +17,133 @@
   <!-- Mount Navbar -->
   <div id="navbar-mount"></div>
 
-  <!-- HEADER BANNER -->
-  <section class="py-16 bg-[#0B132B] border-b border-[#1E2F4D] text-white text-center relative reveal">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
-      <span class="inline-block px-3.5 py-1 rounded-full bg-[#2563EB]/20 border border-[#2563EB]/40 text-[#38BDF8] text-xs font-bold uppercase tracking-widest">
-        Portal Informasi GemilangKatunOutbond
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-serif font-bold text-white italic">Artikel & Blog Outbound Malang Batu</h1>
-      <p class="text-xs sm:text-sm text-[#94A3B8] max-w-2xl mx-auto font-light leading-relaxed">
-        Dapatkan tips berharga seputar persiapan outbound kantor, pemilihan lokasi wisata di Batu, dan inspirasi permainan team building.
-      </p>
+  <!-- HEADER BANNER / HERO -->
+  <section class="relative overflow-hidden bg-[#0B132B] border-b border-[#1E2F4D] text-white reveal">
+
+    <!-- ambient background glow -->
+    <div class="pointer-events-none absolute -top-24 -right-24 w-[420px] h-[420px] rounded-full bg-[#2563EB]/20 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-32 -left-16 w-[320px] h-[320px] rounded-full bg-[#38BDF8]/10 blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+        <!-- LEFT: COPY -->
+        <div class="lg:col-span-6 space-y-4 text-center lg:text-left">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-[#2563EB]/20 border border-[#2563EB]/40 text-[#38BDF8] text-xs font-bold uppercase tracking-widest">
+            Portal Informasi GemilangKatunOutbond
+          </span>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-[2.65rem] leading-tight font-serif font-bold text-white">
+            Tips & Inspirasi<br class="hidden lg:block" />
+            <span class="text-[#38BDF8]">Outbound</span> Terbaik
+          </h1>
+
+          <p class="text-xs sm:text-sm text-[#94A3B8] max-w-md mx-auto lg:mx-0 font-light leading-relaxed">
+            Dapatkan tips berharga seputar persiapan outbound kantor, pemilihan lokasi wisata di Batu, dan inspirasi permainan team building.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-1">
+            <a href="https://wa.me/6282211221909?text=Halo%20Admin%20GemilangKatunOutbond,%20saya%20ingin%20konsultasi%20paket%20outbound" target="_blank" class="inline-flex items-center space-x-2 px-7 py-3 rounded-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold uppercase text-xs tracking-wider shadow-lg transition-all border border-blue-400/20">
+              <span>Konsultasi Perencanaan Outbound</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <!-- ▼ TOMBOL BACA ARTIKEL – sekarang scroll halus ke #blog-grid ▼ -->
+            <a href="#blog-grid" class="btn-scroll-blog inline-flex items-center space-x-2 px-7 py-3 rounded-full border border-[#1E2F4D] text-[#E2E8F0] hover:border-[#38BDF8]/60 hover:text-[#38BDF8] font-bold uppercase text-xs tracking-wider transition-all">
+              <span>Baca Artikel</span>
+            </a>
+          </div>
+
+          <div class="pt-3 grid grid-cols-3 gap-4 border-t border-[#1E2F4D] max-w-md mx-auto lg:mx-0">
+            <div>
+              <div class="text-lg sm:text-xl font-bold text-[#38BDF8]">Rutin</div>
+              <div class="text-[10px] sm:text-xs text-[#94A3B8] leading-snug">Update Artikel</div>
+            </div>
+            <div>
+              <div class="text-lg sm:text-xl font-bold text-[#38BDF8]">Praktis</div>
+              <div class="text-[10px] sm:text-xs text-[#94A3B8] leading-snug">Tips & Panduan</div>
+            </div>
+            <div>
+              <div class="text-lg sm:text-xl font-bold text-[#38BDF8]">Gratis</div>
+              <div class="text-[10px] sm:text-xs text-[#94A3B8] leading-snug">Akses Semua Baca</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: ILLUSTRATION -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative mx-auto w-full max-w-sm aspect-square flex items-center justify-center">
+
+            <!-- radial backdrop -->
+            <div class="absolute inset-0 rounded-full bg-gradient-to-br from-[#2563EB]/25 via-[#131F37] to-transparent"></div>
+
+            <!-- dashed orbit rings -->
+            <div class="absolute inset-6 rounded-full border border-dashed border-[#2563EB]/30"></div>
+            <div class="absolute inset-14 rounded-full border border-[#38BDF8]/20"></div>
+
+            <!-- floating dots -->
+            <span class="absolute top-6 left-10 w-3 h-3 rounded-full bg-[#38BDF8]/60"></span>
+            <span class="absolute bottom-10 right-6 w-2 h-2 rounded-full bg-[#2563EB]/70"></span>
+            <span class="absolute bottom-20 left-4 w-1.5 h-1.5 rounded-full bg-[#38BDF8]/50"></span>
+
+            <!-- main open book illustration -->
+            <div class="relative w-40 h-40 sm:w-48 sm:h-48 rounded-[2.5rem] bg-[#131F37] border border-[#1E2F4D] shadow-2xl flex items-center justify-center rotate-3">
+              <svg viewBox="0 0 100 100" class="w-24 h-24 sm:w-32 sm:h-32">
+                <path d="M50 24 C42 18 26 16 16 20 V72 C26 68 42 70 50 76 Z" fill="#38BDF8" opacity="0.25" stroke="#38BDF8" stroke-width="2"/>
+                <path d="M50 24 C58 18 74 16 84 20 V72 C74 68 58 70 50 76 Z" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+                <line x1="50" y1="24" x2="50" y2="76" stroke="#1E2F4D" stroke-width="2"/>
+                <line x1="59" y1="30" x2="76" y2="27" stroke="#0B132B" stroke-width="2" opacity="0.6"/>
+                <line x1="59" y1="38" x2="76" y2="35" stroke="#0B132B" stroke-width="2" opacity="0.6"/>
+                <line x1="59" y1="46" x2="72" y2="43.5" stroke="#0B132B" stroke-width="2" opacity="0.6"/>
+                <line x1="24" y1="30" x2="41" y2="27" stroke="#0B132B" stroke-width="2" opacity="0.4"/>
+                <line x1="24" y1="38" x2="41" y2="35" stroke="#0B132B" stroke-width="2" opacity="0.4"/>
+              </svg>
+            </div>
+
+            <!-- floating badge: menulis -->
+            <div class="absolute -top-2 right-2 sm:right-6 w-14 h-14 rounded-2xl bg-[#2563EB] shadow-lg flex items-center justify-center border border-blue-400/30">
+              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+            </div>
+
+            <!-- floating badge: kategori / tag -->
+            <div class="absolute top-1/2 -right-4 -translate-y-1/2 w-14 h-14 rounded-2xl bg-[#131F37] border border-[#1E2F4D] shadow-lg flex items-center justify-center">
+              <svg class="w-7 h-7 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5.586a2 2 0 011.414.586l7 7a2 2 0 010 2.828l-6.586 6.586a2 2 0 01-2.828 0l-7-7A2 2 0 013 11V7a4 4 0 014-4z"/></svg>
+            </div>
+
+            <!-- floating badge: waktu baca -->
+            <div class="absolute -bottom-3 left-4 sm:left-10 w-14 h-14 rounded-2xl bg-[#131F37] border border-[#1E2F4D] shadow-lg flex items-center justify-center">
+              <svg class="w-7 h-7 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TRUST STRIP -->
+      <div class="mt-10 pt-6 border-t border-[#1E2F4D]">
+        <p class="text-center text-[10px] sm:text-xs text-[#94A3B8] uppercase tracking-widest mb-5">
+          Topik yang paling sering dibahas
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-90">
+          <div class="flex items-center gap-2 text-[#94A3B8]">
+            <svg class="w-4 h-4 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <span class="text-xs font-semibold tracking-wide">Tips Persiapan</span>
+          </div>
+          <div class="flex items-center gap-2 text-[#94A3B8]">
+            <svg class="w-4 h-4 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span class="text-xs font-semibold tracking-wide">Rekomendasi Lokasi</span>
+          </div>
+          <div class="flex items-center gap-2 text-[#94A3B8]">
+            <svg class="w-4 h-4 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM12 4v1m0 14v1m8-8h-1M5 12H4m14.95 6.95l-.707-.707M6.757 6.757l-.707-.707m12.9 0l-.707.707M6.757 17.243l-.707.707"/></svg>
+            <span class="text-xs font-semibold tracking-wide">Ide Games Seru</span>
+          </div>
+          <div class="flex items-center gap-2 text-[#94A3B8]">
+            <svg class="w-4 h-4 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m-6 4h6m-6 4h4M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            <span class="text-xs font-semibold tracking-wide">Panduan Budget</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -48,6 +165,20 @@
       renderNavbar('blog');
       renderFooter();
       renderFloatingWA();
+
+      // ──────────────────────────────────────────────
+      //  SMOOTH SCROLL UNTUK TOMBOL "BACA ARTIKEL"
+      // ──────────────────────────────────────────────
+      const btnScrollBlog = document.querySelector('.btn-scroll-blog');
+      if (btnScrollBlog) {
+        btnScrollBlog.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
 
       const grid = document.getElementById('blog-grid');
       if (grid) {

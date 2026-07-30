@@ -1,5 +1,3 @@
-// Shared components & interactions for GemilangKatunOutbond website (Navy Blue Theme)
-
 export function renderNavbar(activePage = 'home') {
   const navContainer = document.getElementById('navbar-mount');
   if (!navContainer) return;
@@ -46,13 +44,14 @@ export function renderNavbar(activePage = 'home') {
             ${navLinksHtml}
           </nav>
 
-          <!-- Right Action CTA -->
+          <!-- Right Action CTA – Profesional & Elegant dengan Ikon WhatsApp Asli -->
           <div class="hidden lg:flex items-center space-x-4">
             <a href="https://wa.me/6282211221909?text=Halo%20Tim%20GemilangKatunOutbond,%20saya%20ingin%20tanya%20paket%20outbound" target="_blank" class="px-5 py-2.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 flex items-center space-x-2 hover:-translate-y-0.5">
-              <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+              <!-- Ikon WhatsApp Resmi -->
+              <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 32 32">
+                <path d="M16 2a13.94 13.94 0 0 0-11.87 21.28L2 30l6.93-2.1A13.94 13.94 0 1 0 16 2zm0 25.5a11.51 11.51 0 0 1-5.87-1.6l-.42-.25-4.36 1.32 1.35-4.22-.27-.44a11.53 11.53 0 1 1 9.57 5.19zm6.31-8.62c-.34-.17-2.03-1-2.35-1.12s-.55-.17-.78.17-.9 1.12-1.1 1.35-.4.25-.74.08a9.36 9.36 0 0 1-2.75-1.7 10.3 10.3 0 0 1-1.9-2.36c-.2-.34 0-.52.16-.69s.34-.4.51-.6a2.3 2.3 0 0 0 .34-.57.63.63 0 0 0 0-.6c-.08-.17-.78-1.87-1.07-2.56s-.57-.58-.78-.59h-.67a1.29 1.29 0 0 0-.93.43 3.91 3.91 0 0 0-1.22 2.9 6.8 6.8 0 0 0 1.43 3.61c.17.23 2.45 3.75 5.94 5.25.83.36 1.48.57 1.99.73a4.78 4.78 0 0 0 2.19.14c.67-.1 2.03-.83 2.31-1.63a2.84 2.84 0 0 0 .2-1.63c-.08-.13-.25-.21-.59-.38z"/>
               </svg>
-              <span>Hubungi Admin</span>
+              <span>Hubungi Kami</span>
             </a>
           </div>
 
@@ -75,8 +74,11 @@ export function renderNavbar(activePage = 'home') {
             </a>
           `).join('')}
           <div class="pt-2 px-4">
-            <a href="https://wa.me/6282211221909?text=Halo%20GemilangKatunOutbond,%20saya%20ingin%20tanya%20paket" target="_blank" class="w-full py-3 rounded-full bg-[#2563EB] text-white text-center block text-xs font-bold uppercase tracking-wider shadow-md">
-              Chat Admin via WhatsApp
+            <a href="https://wa.me/6282211221909?text=Halo%20GemilangKatunOutbond,%20saya%20ingin%20tanya%20paket" target="_blank" class="w-full py-3 rounded-full bg-[#2563EB] text-white text-xs font-bold uppercase tracking-wider shadow-md flex items-center justify-center space-x-2">
+              <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 32 32">
+                <path d="M16 2a13.94 13.94 0 0 0-11.87 21.28L2 30l6.93-2.1A13.94 13.94 0 1 0 16 2zm0 25.5a11.51 11.51 0 0 1-5.87-1.6l-.42-.25-4.36 1.32 1.35-4.22-.27-.44a11.53 11.53 0 1 1 9.57 5.19zm6.31-8.62c-.34-.17-2.03-1-2.35-1.12s-.55-.17-.78.17-.9 1.12-1.1 1.35-.4.25-.74.08a9.36 9.36 0 0 1-2.75-1.7 10.3 10.3 0 0 1-1.9-2.36c-.2-.34 0-.52.16-.69s.34-.4.51-.6a2.3 2.3 0 0 0 .34-.57.63.63 0 0 0 0-.6c-.08-.17-.78-1.87-1.07-2.56s-.57-.58-.78-.59h-.67a1.29 1.29 0 0 0-.93.43 3.91 3.91 0 0 0-1.22 2.9 6.8 6.8 0 0 0 1.43 3.61c.17.23 2.45 3.75 5.94 5.25.83.36 1.48.57 1.99.73a4.78 4.78 0 0 0 2.19.14c.67-.1 2.03-.83 2.31-1.63a2.84 2.84 0 0 0 .2-1.63c-.08-.13-.25-.21-.59-.38z"/>
+              </svg>
+              <span>Hubungi Kami via WhatsApp</span>
             </a>
           </div>
         </div>
@@ -236,12 +238,44 @@ export function renderFooter() {
 }
 
 export function renderFloatingWA() {
-  // 1. Floating WhatsApp Button (Pojok Kanan Bawah)
+  // Threshold: 2x tinggi layar
+  const SCROLL_THRESHOLD_MULTIPLIER = 2;
+
+  // Helper untuk toggle visibility
+  function setVisibility(shouldShow) {
+    const wa = document.getElementById('floating-wa');
+    const btt = document.getElementById('back-to-top-btn');
+    [wa, btt].forEach(el => {
+      if (!el) return;
+      if (shouldShow) {
+        el.style.opacity = '1';
+        el.style.visibility = 'visible';
+        el.style.pointerEvents = 'auto';
+      } else {
+        el.style.opacity = '0';
+        el.style.visibility = 'hidden';
+        el.style.pointerEvents = 'none';
+      }
+    });
+  }
+
+  // 1. Floating WhatsApp Button (pojok kanan bawah)
   let waElement = document.getElementById('floating-wa');
   if (!waElement) {
     waElement = document.createElement('div');
     waElement.id = 'floating-wa';
-    waElement.style.cssText = 'position: fixed; bottom: 24px; right: 24px; z-index: 9999; display: flex; align-items: center; pointer-events: auto;';
+    waElement.style.cssText = `
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    `;
     waElement.className = 'group cursor-pointer';
     waElement.innerHTML = `
       <!-- Tooltip label -->
@@ -265,24 +299,78 @@ export function renderFloatingWA() {
     document.body.appendChild(waElement);
   }
 
-  // 2. Floating Back To Top Button (Di atas icon WA)
+  // 2. Floating Back To Top Button (di atas WA, muncul bersamaan)
   let bttElement = document.getElementById('back-to-top-btn');
   if (!bttElement) {
     bttElement = document.createElement('button');
     bttElement.id = 'back-to-top-btn';
     bttElement.setAttribute('aria-label', 'Kembali ke Atas');
-    bttElement.style.cssText = 'position: fixed; bottom: 92px; right: 28px; z-index: 9999; pointer-events: auto;';
-    bttElement.className = 'w-11 h-11 bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-full flex items-center justify-center shadow-xl transition-all duration-300 border border-white/20 transform hover:scale-110 active:scale-95 group';
+    bttElement.style.cssText = `
+      position: fixed;
+      bottom: 92px;
+      right: 28px;
+      z-index: 9999;
+      width: 44px;
+      height: 44px;
+      background-color: #2563EB;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.2);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.3s ease;
+      transform: scale(1);
+    `;
     bttElement.innerHTML = `
-      <svg class="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
       </svg>
     `;
     bttElement.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+    // Hover effect tetap bisa meski hidden? pointer-events akan diatur dinamis.
+    bttElement.addEventListener('mouseenter', () => {
+      if (bttElement.style.opacity === '1') {
+        bttElement.style.transform = 'scale(1.1)';
+      }
+    });
+    bttElement.addEventListener('mouseleave', () => {
+      bttElement.style.transform = 'scale(1)';
+    });
     document.body.appendChild(bttElement);
   }
+
+  // 3. Scroll handler untuk menampilkan / menyembunyikan tombol
+  function handleScrollVisibility() {
+    const threshold = window.innerHeight * SCROLL_THRESHOLD_MULTIPLIER;
+    const shouldShow = window.scrollY > threshold;
+    setVisibility(shouldShow);
+  }
+
+  // Jalankan sekali untuk menyesuaikan status saat halaman dimuat (jika sudah di-scroll)
+  handleScrollVisibility();
+
+  // Tambahkan event listener scroll (throttle ringan)
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleScrollVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Update threshold saat resize (karena innerHeight berubah)
+  window.addEventListener('resize', handleScrollVisibility);
 }
 
 // Interactive Booking Modal Trigger

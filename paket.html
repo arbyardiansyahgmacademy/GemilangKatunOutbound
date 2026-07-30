@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" style="scroll-behavior: smooth;">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,16 +17,135 @@
   <!-- Mount Navbar -->
   <div id="navbar-mount"></div>
 
-  <!-- HEADER BANNER -->
-  <section class="py-16 bg-[#0B132B] border-b border-[#1E2F4D] text-white text-center relative reveal">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
-      <span class="inline-block px-3.5 py-1 rounded-full bg-[#2563EB]/20 border border-[#2563EB]/40 text-[#38BDF8] text-xs font-bold uppercase tracking-widest">
-        Katalog GemilangKatunOutbond 2026
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-serif font-bold text-white italic">Daftar Paket Outbound Malang Batu</h1>
-      <p class="text-xs sm:text-sm text-[#94A3B8] max-w-2xl mx-auto font-light leading-relaxed">
-        Temukan paket outbound dan team building yang sesuai dengan kategori kelompok, tujuan acara, dan anggaran Anda.
-      </p>
+  <!-- HEADER BANNER / HERO -->
+  <section class="relative overflow-hidden bg-[#0B132B] border-b border-[#1E2F4D] text-white reveal">
+
+    <!-- ambient background glow -->
+    <div class="pointer-events-none absolute -top-24 -right-24 w-[420px] h-[420px] rounded-full bg-[#2563EB]/20 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-32 -left-16 w-[320px] h-[320px] rounded-full bg-[#38BDF8]/10 blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+        <!-- LEFT: COPY -->
+        <div class="lg:col-span-6 space-y-4 text-center lg:text-left">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-[#2563EB]/20 border border-[#2563EB]/40 text-[#38BDF8] text-xs font-bold uppercase tracking-widest">
+            Katalog GemilangKatunOutbond 2026
+          </span>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-[2.65rem] leading-tight font-serif font-bold text-white">
+            Pilih Paket Outbound<br class="hidden lg:block" />
+            & <span class="text-[#38BDF8]">Team Building</span> yang Tepat
+          </h1>
+
+          <p class="text-xs sm:text-sm text-[#94A3B8] max-w-md mx-auto lg:mx-0 font-light leading-relaxed">
+            Temukan paket outbound dan team building yang sesuai dengan kategori kelompok, tujuan acara, dan anggaran Anda — semuanya dengan harga transparan.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-1">
+            <a href="https://wa.me/6282211221909?text=Halo%20Admin%20GemilangKatunOutbond,%20saya%20ingin%20konsultasi%20paket%20outbound" target="_blank" class="inline-flex items-center space-x-2 px-7 py-3 rounded-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold uppercase text-xs tracking-wider shadow-lg transition-all border border-blue-400/20">
+              <span>Dapatkan Penawaran Terbaik</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="#paket-tersedia" class="inline-flex items-center space-x-2 px-7 py-3 rounded-full border border-[#1E2F4D] text-[#E2E8F0] hover:border-[#38BDF8]/60 hover:text-[#38BDF8] font-bold uppercase text-xs tracking-wider transition-all">
+              <span>Lihat Semua Paket</span>
+            </a>
+          </div>
+
+          <div class="pt-3 grid grid-cols-3 gap-4 border-t border-[#1E2F4D] max-w-md mx-auto lg:mx-0">
+            <div>
+              <div class="text-lg sm:text-xl font-bold text-[#38BDF8]">4+</div>
+              <div class="text-[10px] sm:text-xs text-[#94A3B8] leading-snug">Kategori Paket</div>
+            </div>
+            <div>
+              <div class="text-lg sm:text-xl font-bold text-[#38BDF8]">All-In</div>
+              <div class="text-[10px] sm:text-xs text-[#94A3B8] leading-snug">Harga Transparan</div>
+            </div>
+            <div>
+              <div class="text-lg sm:text-xl font-bold text-[#38BDF8]">Cepat</div>
+              <div class="text-[10px] sm:text-xs text-[#94A3B8] leading-snug">Proses Booking</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: ILLUSTRATION -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative mx-auto w-full max-w-sm aspect-square flex items-center justify-center">
+
+            <!-- radial backdrop -->
+            <div class="absolute inset-0 rounded-full bg-gradient-to-br from-[#2563EB]/25 via-[#131F37] to-transparent"></div>
+
+            <!-- dashed orbit rings -->
+            <div class="absolute inset-6 rounded-full border border-dashed border-[#2563EB]/30"></div>
+            <div class="absolute inset-14 rounded-full border border-[#38BDF8]/20"></div>
+
+            <!-- floating dots -->
+            <span class="absolute top-6 left-10 w-3 h-3 rounded-full bg-[#38BDF8]/60"></span>
+            <span class="absolute bottom-10 right-6 w-2 h-2 rounded-full bg-[#2563EB]/70"></span>
+            <span class="absolute bottom-20 left-4 w-1.5 h-1.5 rounded-full bg-[#38BDF8]/50"></span>
+
+            <!-- main package illustration -->
+            <div class="relative w-40 h-40 sm:w-48 sm:h-48 rounded-[2.5rem] bg-[#131F37] border border-[#1E2F4D] shadow-2xl flex items-center justify-center rotate-3">
+              <svg viewBox="0 0 100 100" class="w-24 h-24 sm:w-32 sm:h-32" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="50,10 88,30 88,70 50,90 12,70 12,30" fill="none" stroke="#1E2F4D" stroke-width="2"/>
+                <polyline points="12,30 50,50 88,30" stroke="#2563EB" stroke-width="2"/>
+                <line x1="50" y1="50" x2="50" y2="90" stroke="#2563EB" stroke-width="2"/>
+                <polygon points="50,10 88,30 50,50 12,30" fill="#2563EB" opacity="0.9"/>
+                <polygon points="12,30 50,50 50,90 12,70" fill="#38BDF8" opacity="0.35"/>
+                <polygon points="88,30 50,50 50,90 88,70" fill="#38BDF8" opacity="0.2"/>
+                <rect x="43" y="38" width="14" height="10" rx="1.5" fill="#0B132B" stroke="#38BDF8" stroke-width="1.5"/>
+              </svg>
+            </div>
+
+            <!-- floating badge: harga / price tag -->
+            <div class="absolute -top-2 right-2 sm:right-6 w-14 h-14 rounded-2xl bg-[#2563EB] shadow-lg flex items-center justify-center border border-blue-400/30">
+              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5.586a2 2 0 011.414.586l7 7a2 2 0 010 2.828l-6.586 6.586a2 2 0 01-2.828 0l-7-7A2 2 0 013 11V7a4 4 0 014-4z"/></svg>
+            </div>
+
+            <!-- floating badge: durasi / jadwal -->
+            <div class="absolute top-1/2 -right-4 -translate-y-1/2 w-14 h-14 rounded-2xl bg-[#131F37] border border-[#1E2F4D] shadow-lg flex items-center justify-center">
+              <svg class="w-7 h-7 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+
+            <!-- floating badge: kategori / layers -->
+            <div class="absolute -bottom-3 left-4 sm:left-10 w-14 h-14 rounded-2xl bg-[#131F37] border border-[#1E2F4D] shadow-lg flex items-center justify-center">
+              <svg class="w-7 h-7 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TRUST STRIP -->
+      <div id="paket-tersedia" class="mt-10 pt-6 border-t border-[#1E2F4D]">
+        <p class="text-center text-[10px] sm:text-xs text-[#94A3B8] uppercase tracking-widest mb-5">
+          Tersedia paket untuk berbagai jenis kelompok
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-90">
+          <!-- Perusahaan -->
+          <div class="flex items-center gap-2 text-[#94A3B8]">
+            <svg class="w-4 h-4 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m-4 6h16v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z"/></svg>
+            <span class="text-xs font-semibold tracking-wide">Perusahaan</span>
+          </div>
+          <!-- Sekolah -->
+          <div class="flex items-center gap-2 text-[#94A3B8]">
+            <svg class="w-4 h-4 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422A12.083 12.083 0 0119 15.5m-14.16-4.922A12.083 12.083 0 005 15.5m14 0v-4.708M5 15.5v-4.708m0 0L12 14m-7-3.208L12 14"/></svg>
+            <span class="text-xs font-semibold tracking-wide">Sekolah</span>
+          </div>
+          <!-- Keluarga -->
+          <div class="flex items-center gap-2 text-[#94A3B8]">
+            <svg class="w-4 h-4 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-4a4 4 0 10-4-4 4 4 0 004 4zm6 4a4 4 0 00-4-4"/></svg>
+            <span class="text-xs font-semibold tracking-wide">Keluarga</span>
+          </div>
+          <!-- Kampus / Organisasi -->
+          <div class="flex items-center gap-2 text-[#94A3B8]">
+            <svg class="w-4 h-4 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21v-8.5M3 21h18M5 21V7l8-4v18m5 0V11l-6-3v13M9 9v.01M9 12v.01M9 15v.01"/></svg>
+            <span class="text-xs font-semibold tracking-wide">Kampus / Organisasi</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 

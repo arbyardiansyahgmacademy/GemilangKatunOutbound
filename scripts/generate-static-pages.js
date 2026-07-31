@@ -49,12 +49,12 @@ packagesData.forEach((pkg) => {
 
   // Title & Meta
   html = html.replace(
-    '<title id="page-title">Detail Paket Outbound | GemilangKatunOutbond</title>',
-    `<title id="page-title">${pkg.title} - Paket Outbound Malang | GemilangKatunOutbond</title>`
+    '<title id="page-title">Detail Paket Outbound | Gemilang Katun Outbound</title>',
+    `<title id="page-title">${pkg.title} - Paket Outbound Malang | Gemilang Katun Outbound</title>`
   );
 
   html = html.replace(
-    'content="Rincian fasilitas, harga, dan rundown acara Paket Outbound GemilangKatunOutbond Malang."',
+    'content="Rincian fasilitas, harga, dan rundown acara Paket Outbound Gemilang Katun Outbound Malang."',
     `content="${escapeAttr(pkg.shortDesc)}"`
   );
 
@@ -111,7 +111,7 @@ packagesData.forEach((pkg) => {
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </button>
 
-          <a href="https://wa.me/6282211221909?text=Halo%20Admin%20GemilangKatunOutbond,%20mohon%20kirimkan%20PDF%20Proposal%20untuk%20${encodeURIComponent(pkg.title)}" target="_blank" class="w-full py-3 rounded-full bg-[#F5F5F0] hover:bg-[#E0E0D6] text-[#3A5A40] border border-[#E0E0D6] text-center font-bold text-xs flex items-center justify-center space-x-2 transition-colors">
+          <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Gemilang Katun Outbound,%20mohon%20kirimkan%20PDF%20Proposal%20untuk%20${encodeURIComponent(pkg.title)}" target="_blank" class="w-full py-3 rounded-full bg-[#F5F5F0] hover:bg-[#E0E0D6] text-[#3A5A40] border border-[#E0E0D6] text-center font-bold text-xs flex items-center justify-center space-x-2 transition-colors">
             <svg class="w-4 h-4 text-[#3A5A40]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
             <span>Minta Proposal PDF Resmi</span>
           </a>
@@ -183,12 +183,12 @@ blogsData.forEach((blog, currentBlogIndex) => {
 
   // Title & Meta
   html = html.replace(
-    '<title id="blog-meta-title">Detail Artikel | GemilangKatunOutbond</title>',
-    `<title id="blog-meta-title">${blog.title} | GemilangKatunOutbond</title>`
+    '<title id="blog-meta-title">Detail Artikel | Gemilang Katun Outbound</title>',
+    `<title id="blog-meta-title">${blog.title} | Gemilang Katun Outbound</title>`
   );
 
   html = html.replace(
-    'content="Artikel terpercaya seputar panduan outbound, lokasi wisata, dan harga paket di Malang Batu dari GemilangKatunOutbond."',
+    'content="Artikel terpercaya seputar panduan outbound, lokasi wisata, dan harga paket di Malang Batu dari Gemilang Katun Outbound."',
     `content="${escapeAttr(blog.excerpt)}"`
   );
 
@@ -209,7 +209,7 @@ blogsData.forEach((blog, currentBlogIndex) => {
   );
 
   html = html.replace(
-    '<strong id="blog-author" class="text-[#3A5A40] font-semibold">GemilangKatunOutbond</strong>',
+    '<strong id="blog-author" class="text-[#3A5A40] font-semibold">Gemilang Katun Outbound</strong>',
     `<strong id="blog-author" class="text-[#3A5A40] font-semibold">${blog.author}</strong>`
   );
 

@@ -28,7 +28,7 @@ async function startServer() {
     const { name, email, phone, message, category } = req.body;
     res.json({
       success: true,
-      message: `Terima kasih ${name || 'Kak'}! Pesan Anda telah diterima. Tim CS GemilangKatunOutbond akan segera menghubungi WhatsApp Anda dalam 5-15 menit.`,
+      message: `Terima kasih ${name || 'Kak'}! Pesan Anda telah diterima. Tim CS Gemilang Katun Outbound akan segera menghubungi WhatsApp Anda dalam 5-15 menit.`,
     });
   });
 
@@ -71,7 +71,7 @@ async function startServer() {
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`GemilangKatunOutbond Server running on http://0.0.0.0:${PORT}`);
+    console.log(`Gemilang Katun Outbound Server running on http://0.0.0.0:${PORT}`);
   });
 }
 

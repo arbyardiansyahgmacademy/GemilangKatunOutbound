@@ -1,12 +1,12 @@
-# GemilangKatunOutbond
+# Gemilang Katun Outbound
 
-Website resmi **GemilangKatunOutbond** yang menyediakan layanan **Outbound, Team Building, Rafting, Paintball, Family Gathering, Company Gathering, Leadership Training,** dan berbagai aktivitas outdoor lainnya di wilayah **Malang** dan **Kota Batu**.
+Website resmi **Gemilang Katun Outbound** yang menyediakan layanan **Outbound, Team Building, Rafting, Paintball, Family Gathering, Company Gathering, Leadership Training,** dan berbagai aktivitas outdoor lainnya di wilayah **Malang** dan **Kota Batu**.
 
 ---
 
 # Deskripsi
 
-GemilangKatunOutbond merupakan website company profile yang dikembangkan untuk memperkenalkan layanan outbound secara lebih luas melalui media digital. Website ini menjadi pusat informasi bagi calon pelanggan untuk mengenal perusahaan, melihat berbagai pilihan paket kegiatan, mengetahui fasilitas yang ditawarkan, serta mendapatkan informasi mengenai proses reservasi dengan mudah.
+Gemilang Katun Outbound merupakan website company profile yang dikembangkan untuk memperkenalkan layanan outbound secara lebih luas melalui media digital. Website ini menjadi pusat informasi bagi calon pelanggan untuk mengenal perusahaan, melihat berbagai pilihan paket kegiatan, mengetahui fasilitas yang ditawarkan, serta mendapatkan informasi mengenai proses reservasi dengan mudah.
 
 Selain sebagai media promosi, website ini juga berfungsi sebagai sarana komunikasi antara perusahaan dengan calon pelanggan. Pengunjung dapat melihat dokumentasi kegiatan yang pernah dilaksanakan, membaca informasi dan artikel seputar outbound, hingga melakukan konsultasi atau pemesanan secara langsung melalui WhatsApp.
 
@@ -20,7 +20,7 @@ Website ini juga dilengkapi dengan halaman blog sebagai media berbagi informasi,
 
 Untuk mempermudah komunikasi, pada setiap halaman tersedia tombol **Floating WhatsApp** yang memungkinkan pengunjung langsung terhubung dengan admin tanpa harus mencari informasi kontak terlebih dahulu. Selain itu, website juga menyediakan halaman kontak yang berisi informasi alamat perusahaan, peta lokasi, serta media komunikasi resmi lainnya.
 
-Secara keseluruhan, website GemilangKatunOutbond dikembangkan untuk memberikan pengalaman pengguna yang lebih baik dalam mencari informasi layanan outbound, memperkuat citra profesional perusahaan, serta mempermudah proses konsultasi dan reservasi secara online.
+Secara keseluruhan, website Gemilang Katun Outbound dikembangkan untuk memberikan pengalaman pengguna yang lebih baik dalam mencari informasi layanan outbound, memperkuat citra profesional perusahaan, serta mempermudah proses konsultasi dan reservasi secara online.
 
 ---
 

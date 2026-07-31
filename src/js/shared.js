@@ -29,12 +29,12 @@ export function renderNavbar(activePage = 'home') {
           <a href="/" class="flex items-center space-x-3 group">
             <img 
               src="/assets/images/logo.webp" 
-              alt="Logo GemilangKatunOutbond" 
+              alt="Logo Gemilang Katun Outbound" 
               class="w-10 h-10 object-contain rounded-full border border-[#1E2F4D] shadow-sm group-hover:scale-105 transition-all duration-300" 
               onerror="this.onerror=null; this.src='/src/assets/images/logo.webp';"
             />
             <div>
-              <span class="text-lg sm:text-xl font-bold tracking-tight text-[#38BDF8]">GemilangKatun<span class="text-white">Outbond</span></span>
+              <span class="text-lg sm:text-xl font-bold tracking-tight text-[#38BDF8]">Gemilang Katun<span class="text-white"> Outbound</span></span>
               <p class="text-[9px] text-[#94A3B8] font-medium tracking-widest uppercase">Provider No.1 Batu & Malang</p>
             </div>
           </a>
@@ -46,7 +46,7 @@ export function renderNavbar(activePage = 'home') {
 
           <!-- Right Action CTA – Profesional & Elegant dengan Ikon WhatsApp Asli -->
           <div class="hidden lg:flex items-center space-x-4">
-            <a href="https://wa.me/6282211221909?text=Halo%20Tim%20GemilangKatunOutbond,%20saya%20ingin%20tanya%20paket%20outbound" target="_blank" class="px-5 py-2.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 flex items-center space-x-2 hover:-translate-y-0.5">
+            <a href="https://wa.me/6282211221909?text=Halo%20Tim%20Gemilang Katun Outbound,%20saya%20ingin%20tanya%20paket%20outbound" target="_blank" class="px-5 py-2.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 flex items-center space-x-2 hover:-translate-y-0.5">
               <!-- Ikon WhatsApp Resmi -->
               <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 32 32">
                 <path d="M16 2a13.94 13.94 0 0 0-11.87 21.28L2 30l6.93-2.1A13.94 13.94 0 1 0 16 2zm0 25.5a11.51 11.51 0 0 1-5.87-1.6l-.42-.25-4.36 1.32 1.35-4.22-.27-.44a11.53 11.53 0 1 1 9.57 5.19zm6.31-8.62c-.34-.17-2.03-1-2.35-1.12s-.55-.17-.78.17-.9 1.12-1.1 1.35-.4.25-.74.08a9.36 9.36 0 0 1-2.75-1.7 10.3 10.3 0 0 1-1.9-2.36c-.2-.34 0-.52.16-.69s.34-.4.51-.6a2.3 2.3 0 0 0 .34-.57.63.63 0 0 0 0-.6c-.08-.17-.78-1.87-1.07-2.56s-.57-.58-.78-.59h-.67a1.29 1.29 0 0 0-.93.43 3.91 3.91 0 0 0-1.22 2.9 6.8 6.8 0 0 0 1.43 3.61c.17.23 2.45 3.75 5.94 5.25.83.36 1.48.57 1.99.73a4.78 4.78 0 0 0 2.19.14c.67-.1 2.03-.83 2.31-1.63a2.84 2.84 0 0 0 .2-1.63c-.08-.13-.25-.21-.59-.38z"/>
@@ -74,7 +74,7 @@ export function renderNavbar(activePage = 'home') {
             </a>
           `).join('')}
           <div class="pt-2 px-4">
-            <a href="https://wa.me/6282211221909?text=Halo%20GemilangKatunOutbond,%20saya%20ingin%20tanya%20paket" target="_blank" class="w-full py-3 rounded-full bg-[#2563EB] text-white text-xs font-bold uppercase tracking-wider shadow-md flex items-center justify-center space-x-2">
+            <a href="https://wa.me/6282211221909?text=Halo%20Gemilang Katun Outbound,%20saya%20ingin%20tanya%20paket" target="_blank" class="w-full py-3 rounded-full bg-[#2563EB] text-white text-xs font-bold uppercase tracking-wider shadow-md flex items-center justify-center space-x-2">
               <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 32 32">
                 <path d="M16 2a13.94 13.94 0 0 0-11.87 21.28L2 30l6.93-2.1A13.94 13.94 0 1 0 16 2zm0 25.5a11.51 11.51 0 0 1-5.87-1.6l-.42-.25-4.36 1.32 1.35-4.22-.27-.44a11.53 11.53 0 1 1 9.57 5.19zm6.31-8.62c-.34-.17-2.03-1-2.35-1.12s-.55-.17-.78.17-.9 1.12-1.1 1.35-.4.25-.74.08a9.36 9.36 0 0 1-2.75-1.7 10.3 10.3 0 0 1-1.9-2.36c-.2-.34 0-.52.16-.69s.34-.4.51-.6a2.3 2.3 0 0 0 .34-.57.63.63 0 0 0 0-.6c-.08-.17-.78-1.87-1.07-2.56s-.57-.58-.78-.59h-.67a1.29 1.29 0 0 0-.93.43 3.91 3.91 0 0 0-1.22 2.9 6.8 6.8 0 0 0 1.43 3.61c.17.23 2.45 3.75 5.94 5.25.83.36 1.48.57 1.99.73a4.78 4.78 0 0 0 2.19.14c.67-.1 2.03-.83 2.31-1.63a2.84 2.84 0 0 0 .2-1.63c-.08-.13-.25-.21-.59-.38z"/>
               </svg>
@@ -113,12 +113,12 @@ export function renderFooter() {
             <a href="/" class="inline-flex items-center space-x-3 group">
               <img 
                 src="/assets/images/logo.webp" 
-                alt="Logo GemilangKatunOutbond" 
+                alt="Logo Gemilang Katun Outbound" 
                 class="w-10 h-10 object-contain rounded-full border border-[#1E2F4D] shadow-sm group-hover:scale-105 transition-all duration-300" 
                 onerror="this.onerror=null; this.src='/src/assets/images/logo.webp';"
               />
               <div>
-                <span class="text-lg font-bold tracking-tight text-[#38BDF8]">GemilangKatun<span class="text-white">Outbond</span></span>
+                <span class="text-lg font-bold tracking-tight text-[#38BDF8]">GemilangKatun<span class="text-white">Outbound</span></span>
                 <p class="text-[9px] text-[#94A3B8] font-semibold tracking-widest uppercase">Provider No.1 Batu & Malang</p>
               </div>
             </a>
@@ -131,21 +131,21 @@ export function renderFooter() {
               <span class="text-[11px] uppercase font-bold tracking-wider text-[#38BDF8] block mb-2">Ikuti Media Sosial Kami</span>
               <div class="flex items-center space-x-2.5">
                 <!-- Instagram -->
-                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram GemilangKatunOutbond" class="w-9 h-9 rounded-full bg-[#131F37] border border-[#1E2F4D] text-[#38BDF8] hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] flex items-center justify-center transition-all duration-300 shadow-sm hover:-translate-y-0.5">
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram Gemilang Katun Outbound" class="w-9 h-9 rounded-full bg-[#131F37] border border-[#1E2F4D] text-[#38BDF8] hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] flex items-center justify-center transition-all duration-300 shadow-sm hover:-translate-y-0.5">
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                   </svg>
                 </a>
 
                 <!-- YouTube -->
-                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube GemilangKatunOutbond" class="w-9 h-9 rounded-full bg-[#131F37] border border-[#1E2F4D] text-[#38BDF8] hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] flex items-center justify-center transition-all duration-300 shadow-sm hover:-translate-y-0.5">
+                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube Gemilang Katun Outbound" class="w-9 h-9 rounded-full bg-[#131F37] border border-[#1E2F4D] text-[#38BDF8] hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] flex items-center justify-center transition-all duration-300 shadow-sm hover:-translate-y-0.5">
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                 </a>
 
                 <!-- TikTok -->
-                <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok GemilangKatunOutbond" class="w-9 h-9 rounded-full bg-[#131F37] border border-[#1E2F4D] text-[#38BDF8] hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] flex items-center justify-center transition-all duration-300 shadow-sm hover:-translate-y-0.5">
+                <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok Gemilang Katun Outbound" class="w-9 h-9 rounded-full bg-[#131F37] border border-[#1E2F4D] text-[#38BDF8] hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] flex items-center justify-center transition-all duration-300 shadow-sm hover:-translate-y-0.5">
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.31 1.52-1.35 2.51-.05 1.2.53 2.39 1.52 3.01.92.58 2.11.62 3.08.18.89-.39 1.53-1.22 1.73-2.17.08-.47.09-.95.08-1.43-.02-3.88-.01-7.77-.01-11.66z"/>
                   </svg>
@@ -208,7 +208,7 @@ export function renderFooter() {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <a href="mailto:admin@gemilangkatunoutbond.co.id" class="text-[#94A3B8] hover:text-[#38BDF8] transition-colors truncate">admin@gemilangkatunoutbond.co.id</a>
+                <a href="mailto:admin@Gemilang Katun Outbound.co.id" class="text-[#94A3B8] hover:text-[#38BDF8] transition-colors truncate">admin@Gemilang Katun Outbound.co.id</a>
               </li>
               <li class="flex items-center space-x-2.5">
                 <div class="w-6 h-6 rounded-md bg-[#2563EB]/20 text-[#38BDF8] flex items-center justify-center shrink-0">
@@ -225,7 +225,7 @@ export function renderFooter() {
 
         <!-- Copyright & Bottom Bar -->
         <div class="border-t border-[#1E2F4D] pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-[#94A3B8] space-y-3 md:space-y-0">
-          <p>© 2026 GemilangKatunOutbond Professional. Hak Cipta Dilindungi Undang-Undang.</p>
+          <p>© 2026 Gemilang Katun Outbound Professional. Hak Cipta Dilindungi Undang-Undang.</p>
           <div class="flex items-center space-x-6 text-[11px]">
             <span>Provider Outbound Resmi Malang & Batu</span>
             <a href="/contact.html" class="hover:text-[#38BDF8] hover:underline">Lokasi Google Maps</a>
@@ -286,10 +286,10 @@ export function renderFloatingWA() {
       </div>
 
       <!-- Official Floating WhatsApp Button -->
-      <a href="https://wa.me/6282211221909?text=Halo%20Admin%20GemilangKatunOutbond,%20saya%20ingin%20tanya%20informasi%20dan%20penawaran%20paket%20outbound" 
+      <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Gemilang Katun Outbound,%20saya%20ingin%20tanya%20informasi%20dan%20penawaran%20paket%20outbound" 
          target="_blank" 
          rel="noopener"
-         aria-label="Chat Official WhatsApp Admin GemilangKatunOutbond"
+         aria-label="Chat Official WhatsApp Admin Gemilang Katun Outbound"
          class="w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white hover:scale-110 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 border-2 border-white">
         <svg class="w-8 h-8 fill-current text-white" viewBox="0 0 32 32">
           <path d="M16 2a13.94 13.94 0 0 0-11.87 21.28L2 30l6.93-2.1A13.94 13.94 0 1 0 16 2zm0 25.5a11.51 11.51 0 0 1-5.87-1.6l-.42-.25-4.36 1.32 1.35-4.22-.27-.44a11.53 11.53 0 1 1 9.57 5.19zm6.31-8.62c-.34-.17-2.03-1-2.35-1.12s-.55-.17-.78.17-.9 1.12-1.1 1.35-.4.25-.74.08a9.36 9.36 0 0 1-2.75-1.7 10.3 10.3 0 0 1-1.9-2.36c-.2-.34 0-.52.16-.69s.34-.4.51-.6a2.3 2.3 0 0 0 .34-.57.63.63 0 0 0 0-.6c-.08-.17-.78-1.87-1.07-2.56s-.57-.58-.78-.59h-.67a1.29 1.29 0 0 0-.93.43 3.91 3.91 0 0 0-1.22 2.9 6.8 6.8 0 0 0 1.43 3.61c.17.23 2.45 3.75 5.94 5.25.83.36 1.48.57 1.99.73a4.78 4.78 0 0 0 2.19.14c.67-.1 2.03-.83 2.31-1.63a2.84 2.84 0 0 0 .2-1.63c-.08-.13-.25-.21-.59-.38z"/>
@@ -455,7 +455,7 @@ export function openBookingModal(packageData = {}) {
       const dateVal = document.getElementById('modal-event-date').value;
       const notesVal = document.getElementById('modal-notes').value;
 
-      const waMsg = `Halo Admin GemilangKatunOutbond, saya ingin reservasi/tanya penawaran paket:%0A%0A*Nama/Instansi:* ${userName}%0A*No WA:* ${userPhone}%0A*Paket:* ${pkgName}%0A*Jumlah Peserta:* ${participants} Orang%0A*Tanggal Acara:* ${dateVal || 'Belum pasti'}%0A*Catatan:* ${notesVal || '-'}`;
+      const waMsg = `Halo Admin Gemilang Katun Outbound, saya ingin reservasi/tanya penawaran paket:%0A%0A*Nama/Instansi:* ${userName}%0A*No WA:* ${userPhone}%0A*Paket:* ${pkgName}%0A*Jumlah Peserta:* ${participants} Orang%0A*Tanggal Acara:* ${dateVal || 'Belum pasti'}%0A*Catatan:* ${notesVal || '-'}`;
 
       window.open(`https://wa.me/6282211221909?text=${waMsg}`, '_blank');
       modal.classList.add('hidden');
@@ -463,7 +463,7 @@ export function openBookingModal(packageData = {}) {
   }
 
   document.getElementById('modal-package-id').value = packageData.id || '';
-  document.getElementById('modal-package-name').value = packageData.title || 'Paket Outbound GemilangKatunOutbond';
+  document.getElementById('modal-package-name').value = packageData.title || 'Paket Outbound Gemilang Katun Outbound';
   modal.classList.remove('hidden');
 }
 
@@ -520,7 +520,7 @@ export function setupLightboxGallery(itemsArray = []) {
             </h3>
 
             <p id="lightbox-desc" class="text-xs sm:text-sm text-[#94A3B8] leading-relaxed font-light">
-              Dokumentasi kegiatan outbound & tantangan keberanian di kawasan hutan pinus Coban Rondo Batu Malang bersama fasilitator BNSP GemilangKatunOutbond.
+              Dokumentasi kegiatan outbound & tantangan keberanian di kawasan hutan pinus Coban Rondo Batu Malang bersama fasilitator BNSP Gemilang Katun Outbound.
             </p>
           </div>
 
@@ -620,7 +620,7 @@ function updateLightboxDisplay() {
       return url;
     };
     img.src = fixPath(currentItem.src);
-    img.alt = currentItem.title || 'Foto Galeri GemilangKatunOutbond';
+    img.alt = currentItem.title || 'Foto Galeri Gemilang Katun Outbound';
     img.setAttribute('referrerpolicy', 'no-referrer');
     img.onerror = function() {
       this.onerror = null;
@@ -628,11 +628,11 @@ function updateLightboxDisplay() {
     };
   }
   if (cap) cap.textContent = currentItem.title || 'Dokumentasi Outbound Malang Batu';
-  if (desc) desc.textContent = currentItem.desc || `Dokumentasi asli kegiatan ${currentItem.title || 'outbound'} di kawasan Malang & Batu bersama provider resmi GemilangKatunOutbond.`;
+  if (desc) desc.textContent = currentItem.desc || `Dokumentasi asli kegiatan ${currentItem.title || 'outbound'} di kawasan Malang & Batu bersama provider resmi Gemilang Katun Outbound.`;
   if (counter) counter.textContent = `Foto ${currentGalleryIndex + 1} dari ${galleryItemsState.length}`;
   if (cat) cat.textContent = currentItem.cat || currentItem.category || 'Galeri Outbound';
   if (waBtn) {
-    waBtn.href = `https://wa.me/6282211221909?text=Halo%20Admin%20GemilangKatunOutbond,%20saya%20tertarik%20dengan%20kegiatan%20galeri:%20${encodeURIComponent(currentItem.title || '')}`;
+    waBtn.href = `https://wa.me/6282211221909?text=Halo%20Admin%20Gemilang Katun Outbound,%20saya%20tertarik%20dengan%20kegiatan%20galeri:%20${encodeURIComponent(currentItem.title || '')}`;
   }
 }
 

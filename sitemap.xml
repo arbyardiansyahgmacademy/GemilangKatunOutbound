@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  CATATAN:
+  Sitemap ini berisi halaman statis utama yang terlihat pada kode Anda
+  (index.html, paket.html, gallery.html, blog.html).
+  Situs Anda merender detail paket (/paket/{id}.html) dan detail blog
+  (/blog/{id}.html) secara dinamis lewat JavaScript (packagesData & blogsData),
+  jadi URL-nya belum bisa saya ketahui pastinya. Setelah domain live,
+  tambahkan setiap URL /paket/xxx.html dan /blog/xxx.html sebagai <url> baru
+  di bawah ini, atau generate otomatis dari file packages.js & blogs.js.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/hero_outbound_malang_1784793004431.webp</image:loc>
+      <image:title>Outbound Seru GemilangKatunOutbond Malang Batu</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/paket.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/gallery.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/blog.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

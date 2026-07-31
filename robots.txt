@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Blokir halaman internal/tanpa nilai SEO (sesuaikan bila ada)
+Disallow: /admin/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /*?*utm_
+Disallow: /*?*fbclid
+
+# Izinkan bot AI/AEO utama untuk membaca konten (opsional, hapus baris ini jika tidak ingin diindeks AI)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://gemilangkatunoutbound.web.id/sitemap.xml

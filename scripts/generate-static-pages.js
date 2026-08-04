@@ -6,6 +6,27 @@ import { blogsData } from '../src/data/blogs.js';
 const rootDir = process.cwd();
 const paketDir = path.join(rootDir, 'paket');
 const blogDir = path.join(rootDir, 'blog');
+const SITE_URL = 'https://gemilangkatunoutbound.web.id';
+const ORG_LOGO = `${SITE_URL}/assets/images/logoo.webp`;
+
+// Month map for ISO Date conversion
+const INDO_MONTHS = {
+  'januari': '01', 'februari': '02', 'maret': '03', 'april': '04', 'mei': '05', 'juni': '06',
+  'juli': '07', 'agustus': '08', 'september': '09', 'oktober': '10', 'november': '11', 'desember': '12'
+};
+function toISODate(indoDateStr) {
+  if (!indoDateStr) return new Date().toISOString().slice(0, 10);
+  const parts = indoDateStr.trim().split(' ');
+  if (parts.length < 3) return new Date().toISOString().slice(0, 10);
+  const [day, monthName, year] = parts;
+  const month = INDO_MONTHS[monthName.toLowerCase()] || '01';
+  return `${year}-${month}-${day.padStart(2, '0')}`;
+}
+
+function stripHtml(html) {
+  if (!html) return '';
+  return html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+}
 
 // Ensure image directories exist and copy all images to public
 const srcImgDir = path.join(rootDir, 'src', 'assets', 'images');
@@ -39,6 +60,11 @@ const cleanPath = (url, fallback = '/assets/images/hero_outbound_malang_17847930
   filename = filename.replace(/photo\s*\((\d+)\)\.webp/g, 'photo_$1.webp');
   if (!filename || filename === 'photo_.webp' || filename.includes('photo_.webp') || filename.includes('undefined')) return fallback;
   return '/assets/images/' + filename;
+};
+
+const absoluteImg = (url) => {
+  const clean = cleanPath(url);
+  return clean.startsWith('http') ? clean : SITE_URL + encodeURI(clean);
 };
 
 // 1. GENERATE PAKET STATIC HTML PAGES
@@ -175,22 +201,163 @@ packagesData.forEach((pkg) => {
   console.log(`Generated Paket: /paket/${pkg.id}.html`);
 });
 
-// 2. GENERATE BLOG STATIC HTML PAGES
+// 2. GENERATE BLOG STATIC HTML PAGES (FULL PRE-RENDERED SEO/AEO/GEO & CANONICAL)
 blogsData.forEach((blog, currentBlogIndex) => {
+  const blogSlug = blog.slug || blog.id;
   const filePath = path.join(blogDir, `${blog.id}.html`);
+  const canonicalUrl = `${SITE_URL}/blog/${blogSlug}.html`;
 
   let html = blogTemplate;
 
-  // Title & Meta
+  const plainExcerpt = blog.metaDescription || blog.excerpt || stripHtml(blog.content).slice(0, 155);
+  const articleImage = absoluteImg(blog.image);
+  const pageTitle = blog.metaTitle || `${blog.title} | Gemilang Katun Outbound`;
+  const isoPublished = toISODate(blog.date);
+  const isoModified = blog.lastUpdated ? blog.lastUpdated : isoPublished;
+
+  const keywordParts = [
+    blog.focusKeyphrase,
+    ...(blog.secondaryEntities || []),
+    blog.category,
+    'Gemilang Katun Outbound'
+  ].filter(Boolean);
+
+  // --- Static Head Meta Replacements ---
   html = html.replace(
-    '<title id="blog-meta-title">Detail Artikel | Gemilang Katun Outbound</title>',
-    `<title id="blog-meta-title">${blog.title} | Gemilang Katun Outbound</title>`
+    '<title id="blog-meta-title">Artikel Outbound Malang | Gemilang Katun Outbound</title>',
+    `<title id="blog-meta-title">${escapeAttr(pageTitle)}</title>`
   );
 
   html = html.replace(
-    'content="Artikel terpercaya seputar panduan outbound, lokasi wisata, dan harga paket di Malang Batu dari Gemilang Katun Outbound."',
-    `content="${escapeAttr(blog.excerpt)}"`
+    '<meta name="description" id="blog-meta-desc" content="Artikel outbound Malang Batu dari Gemilang Katun Outbound." />',
+    `<meta name="description" id="blog-meta-desc" content="${escapeAttr(plainExcerpt)}" />`
   );
+
+  html = html.replace(
+    '<meta name="keywords" id="blog-meta-keywords" content="outbound Malang, outbound Batu, paket outbound, team building Malang, family gathering Malang" />',
+    `<meta name="keywords" id="blog-meta-keywords" content="${escapeAttr(keywordParts.join(', '))}" />`
+  );
+
+  html = html.replace(
+    '<meta name="author" id="blog-meta-author" content="Gemilang Katun Outbound" />',
+    `<meta name="author" id="blog-meta-author" content="${escapeAttr(blog.author || 'Gemilang Katun Outbound')}" />`
+  );
+
+  html = html.replace(
+    '<link rel="canonical" id="blog-canonical" href="https://gemilangkatunoutbound.web.id/blog.html" />',
+    `<link rel="canonical" id="blog-canonical" href="${canonicalUrl}" />`
+  );
+
+  // OG tags replacement
+  html = html.replace(
+    '<meta property="og:title" id="og-title" content="Artikel Outbound Malang | Gemilang Katun Outbound" />',
+    `<meta property="og:title" id="og-title" content="${escapeAttr(pageTitle)}" />`
+  );
+  html = html.replace(
+    '<meta property="og:description" id="og-desc" content="Artikel outbound Malang Batu dari Gemilang Katun Outbound." />',
+    `<meta property="og:description" id="og-desc" content="${escapeAttr(plainExcerpt)}" />`
+  );
+  html = html.replace(
+    '<meta property="og:url" id="og-url" content="https://gemilangkatunoutbound.web.id/blog.html" />',
+    `<meta property="og:url" id="og-url" content="${canonicalUrl}" />`
+  );
+  html = html.replace(
+    '<meta property="og:image" id="og-image" content="https://gemilangkatunoutbound.web.id/assets/images/hero_outbound_malang_1784793004431.webp" />',
+    `<meta property="og:image" id="og-image" content="${articleImage}" />`
+  );
+  html = html.replace(
+    '<meta property="og:image:alt" id="og-image-alt" content="Kegiatan outbound Gemilang Katun Outbound di Malang dan Batu" />',
+    `<meta property="og:image:alt" id="og-image-alt" content="${escapeAttr(blog.imageAlt || blog.title)}" />`
+  );
+  html = html.replace(
+    '<meta property="article:published_time" id="og-published" content="2026-01-01" />',
+    `<meta property="article:published_time" id="og-published" content="${isoPublished}" />`
+  );
+  html = html.replace(
+    '<meta property="article:modified_time" id="og-modified" content="2026-01-01" />',
+    `<meta property="article:modified_time" id="og-modified" content="${isoModified}" />`
+  );
+  html = html.replace(
+    '<meta property="article:author" id="og-author" content="Gemilang Katun Outbound" />',
+    `<meta property="article:author" id="og-author" content="${escapeAttr(blog.author || 'Gemilang Katun Outbound')}" />`
+  );
+  html = html.replace(
+    '<meta property="article:section" id="og-section" content="Tips Outbound" />',
+    `<meta property="article:section" id="og-section" content="${escapeAttr(blog.category || 'Tips Outbound')}" />`
+  );
+  html = html.replace(
+    '<meta property="article:tag" id="og-tag" content="outbound Malang" />',
+    `<meta property="article:tag" id="og-tag" content="${escapeAttr(blog.focusKeyphrase || blog.category || 'outbound Malang')}" />`
+  );
+
+  // Twitter cards replacement
+  html = html.replace(
+    '<meta name="twitter:title" id="tw-title" content="Artikel Outbound Malang | Gemilang Katun Outbound" />',
+    `<meta name="twitter:title" id="tw-title" content="${escapeAttr(pageTitle)}" />`
+  );
+  html = html.replace(
+    '<meta name="twitter:description" id="tw-desc" content="Artikel outbound Malang Batu dari Gemilang Katun Outbound." />',
+    `<meta name="twitter:description" id="tw-desc" content="${escapeAttr(plainExcerpt)}" />`
+  );
+  html = html.replace(
+    '<meta name="twitter:image" id="tw-image" content="https://gemilangkatunoutbound.web.id/assets/images/hero_outbound_malang_1784793004431.webp" />',
+    `<meta name="twitter:image" id="tw-image" content="${articleImage}" />`
+  );
+
+  // Ingest Static JSON-LD (Article & Breadcrumb) into <head> for fast AI/Bot crawling
+  const aboutEntities = blog.primaryEntity ? [{ '@type': 'Thing', 'name': blog.primaryEntity }] : undefined;
+  const mentionEntities = (blog.secondaryEntities && blog.secondaryEntities.length)
+    ? blog.secondaryEntities.map(name => ({ '@type': 'Thing', 'name': name }))
+    : undefined;
+
+  const articleLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'headline': blog.title,
+    'description': plainExcerpt,
+    'image': [articleImage],
+    'datePublished': isoPublished,
+    'dateModified': isoModified,
+    'keywords': keywordParts.join(', '),
+    'author': {
+      '@type': 'Person',
+      'name': blog.author,
+      'description': blog.authorBio || undefined
+    },
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Gemilang Katun Outbound',
+      'logo': { '@type': 'ImageObject', 'url': ORG_LOGO }
+    },
+    'mainEntityOfPage': { '@type': 'WebPage', '@id': canonicalUrl },
+    'articleSection': blog.category,
+    'about': aboutEntities,
+    'mentions': mentionEntities,
+    'inLanguage': 'id-ID',
+    'speakable': {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['#blog-title', '#blog-excerpt']
+    }
+  };
+  if (blog.reviewedBy) {
+    articleLd.reviewedBy = { '@type': 'Person', 'name': blog.reviewedBy };
+  }
+
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE_URL + '/' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': SITE_URL + '/blog.html' },
+      { '@type': 'ListItem', 'position': 3, 'name': blog.title, 'item': canonicalUrl }
+    ]
+  };
+
+  const jsonLdTags = `
+    <script type="application/ld+json" id="ld-article">${JSON.stringify(articleLd)}</script>
+    <script type="application/ld+json" id="ld-breadcrumb">${JSON.stringify(breadcrumbLd)}</script>
+  `;
+  html = html.replace('</head>', `${jsonLdTags}\n</head>`);
 
   // Category, Title, Author, Date, Read Time, Image, Content
   html = html.replace(
@@ -260,7 +427,7 @@ blogsData.forEach((blog, currentBlogIndex) => {
     }
 
     const sidebarHtml = sidebar3Blogs.map(rec => `
-      <a href="/blog/${rec.id}.html" class="flex items-center space-x-3 group border-b border-[#E0E0D6] pb-3 last:border-0 last:pb-0">
+      <a href="/blog/${rec.slug || rec.id}.html" class="flex items-center space-x-3 group border-b border-[#E0E0D6] pb-3 last:border-0 last:pb-0">
         <img src="${cleanPath(rec.image)}" alt="${rec.title}" onerror="this.onerror=null; this.src='/assets/images/hero_outbound_malang_1784793004431.webp'" class="w-14 h-14 rounded-xl object-cover flex-shrink-0 group-hover:scale-105 transition-transform" />
         <div class="space-y-0.5">
           <span class="text-[10px] text-[#3A5A40] font-bold uppercase block tracking-wider">${rec.category}</span>
@@ -305,7 +472,7 @@ blogsData.forEach((blog, currentBlogIndex) => {
           </div>
         </div>
         <div class="px-5 pb-5 pt-1">
-          <a href="/blog/${item.id}.html" class="text-xs font-bold text-[#3A5A40] hover:underline inline-flex items-center space-x-1">
+          <a href="/blog/${item.slug || item.id}.html" class="text-xs font-bold text-[#3A5A40] hover:underline inline-flex items-center space-x-1">
             <span>Baca Artikel</span>
             <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
@@ -329,4 +496,79 @@ blogsData.forEach((blog, currentBlogIndex) => {
   console.log(`Generated Blog: /blog/${blog.id}.html`);
 });
 
-console.log(`Successfully generated ${packagesData.length} paket pages and ${blogsData.length} blog pages with full static HTML!`);
+// 3. GENERATE SITEMAP.XML (SINKRON 100% DENGAN PACKAGES & BLOGS)
+const generateSitemap = () => {
+  const today = new Date().toISOString().slice(0, 10);
+  
+  const staticPages = [
+    { url: `${SITE_URL}/`, priority: '1.0', changefreq: 'weekly' },
+    { url: `${SITE_URL}/paket.html`, priority: '0.9', changefreq: 'weekly' },
+    { url: `${SITE_URL}/gallery.html`, priority: '0.7', changefreq: 'monthly' },
+    { url: `${SITE_URL}/blog.html`, priority: '0.7', changefreq: 'weekly' },
+    { url: `${SITE_URL}/about.html`, priority: '0.6', changefreq: 'monthly' },
+    { url: `${SITE_URL}/contact.html`, priority: '0.6', changefreq: 'monthly' }
+  ];
+
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
+  xml += `        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n\n`;
+
+  xml += `  <!-- ============ HALAMAN UTAMA ============ -->\n`;
+  staticPages.forEach(p => {
+    xml += `  <url>\n`;
+    xml += `    <loc>${p.url}</loc>\n`;
+    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += `    <changefreq>${p.changefreq}</changefreq>\n`;
+    xml += `    <priority>${p.priority}</priority>\n`;
+    if (p.url === `${SITE_URL}/`) {
+      xml += `    <image:image>\n`;
+      xml += `      <image:loc>${SITE_URL}/assets/images/hero_outbound_malang_1784793004431.webp</image:loc>\n`;
+      xml += `      <image:title>Outbound Seru Gemilang Katun Outbound Malang Batu</image:title>\n`;
+      xml += `    </image:image>\n`;
+    }
+    xml += `  </url>\n\n`;
+  });
+
+  xml += `  <!-- ============ HALAMAN DETAIL PAKET ============ -->\n`;
+  packagesData.forEach(pkg => {
+    xml += `  <url>\n`;
+    xml += `    <loc>${SITE_URL}/paket/${pkg.id}.html</loc>\n`;
+    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += `    <changefreq>monthly</changefreq>\n`;
+    xml += `    <priority>0.8</priority>\n`;
+    if (pkg.image) {
+      xml += `    <image:image>\n`;
+      xml += `      <image:loc>${absoluteImg(pkg.image)}</image:loc>\n`;
+      xml += `      <image:title>${escapeAttr(pkg.title)}</image:title>\n`;
+      xml += `    </image:image>\n`;
+    }
+    xml += `  </url>\n\n`;
+  });
+
+  xml += `  <!-- ============ HALAMAN DETAIL BLOG ============ -->\n`;
+  blogsData.forEach(blog => {
+    const slug = blog.slug || blog.id;
+    const isoDate = toISODate(blog.date);
+    xml += `  <url>\n`;
+    xml += `    <loc>${SITE_URL}/blog/${slug}.html</loc>\n`;
+    xml += `    <lastmod>${blog.lastUpdated || isoDate}</lastmod>\n`;
+    xml += `    <changefreq>monthly</changefreq>\n`;
+    xml += `    <priority>0.6</priority>\n`;
+    if (blog.image) {
+      xml += `    <image:image>\n`;
+      xml += `      <image:loc>${absoluteImg(blog.image)}</image:loc>\n`;
+      xml += `      <image:title>${escapeAttr(blog.title)}</image:title>\n`;
+      xml += `    </image:image>\n`;
+    }
+    xml += `  </url>\n\n`;
+  });
+
+  xml += `</urlset>`;
+
+  fs.writeFileSync(path.join(rootDir, 'sitemap.xml'), xml, 'utf-8');
+  console.log('Successfully regenerated sitemap.xml with all packages & blogs!');
+};
+
+generateSitemap();
+
+console.log(`Successfully generated ${packagesData.length} paket pages and ${blogsData.length} blog pages with full static HTML & updated sitemap.xml!`);

@@ -1,47 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  CATATAN:
-  Sitemap ini berisi halaman statis utama yang terlihat pada kode Anda
-  (index.html, paket.html, gallery.html, blog.html).
-  Situs Anda merender detail paket (/paket/{id}.html) dan detail blog
-  (/blog/{id}.html) secara dinamis lewat JavaScript (packagesData & blogsData),
-  jadi URL-nya belum bisa saya ketahui pastinya. Setelah domain live,
-  tambahkan setiap URL /paket/xxx.html dan /blog/xxx.html sebagai <url> baru
-  di bawah ini, atau generate otomatis dari file packages.js & blogs.js.
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
+  <!-- ============ HALAMAN UTAMA ============ -->
   <url>
     <loc>https://gemilangkatunoutbound.web.id/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://gemilangkatunoutbound.web.id/assets/images/hero_outbound_malang_1784793004431.webp</image:loc>
-      <image:title>Outbound Seru GemilangKatunOutbond Malang Batu</image:title>
+      <image:title>Outbound Seru Gemilang Katun Outbound Malang Batu</image:title>
     </image:image>
   </url>
 
   <url>
     <loc>https://gemilangkatunoutbound.web.id/paket.html</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://gemilangkatunoutbound.web.id/gallery.html</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://gemilangkatunoutbound.web.id/blog.html</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/about.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/contact.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ============ HALAMAN DETAIL PAKET ============ -->
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/paket/paket-outbound-perusahaan-malang.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/gambarr_16.webp</image:loc>
+      <image:title>Paket Outbound Team Building Perusahaan Malang</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/paket/paket-outbound-rafting-batu.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/gambarr_15.webp</image:loc>
+      <image:title>Paket Outbound + Rafting Kaliwatu / Kasembon Malang</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/paket/paket-outbound-sekolah-edukasi.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/photo_15.webp</image:loc>
+      <image:title>Paket Outbound Edukasi & Karakter Siswa Sekolah</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/paket/paket-outbound-keluarga-gathering.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/gambarr_1.webp</image:loc>
+      <image:title>Paket Outbound Family Gathering & Reuni Keluarga</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/paket/paket-outbound-kampus-organisasi.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/photo_14.webp</image:loc>
+      <image:title>Paket Outbound Kampus, BEM & Makrab Organisasi</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/paket/paket-outbound-paintball-batu.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/gambarr_2.webp</image:loc>
+      <image:title>Paket Outbound + Paintball War Simulation Batu</image:title>
+    </image:image>
+  </url>
+
+  <!-- ============ HALAMAN DETAIL BLOG ============ -->
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/blog/rafting-tim-kecil-vs-rafting-sekantor.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/perbandingan-budget-rafting-tim-kecil-sekantor.webp</image:loc>
+      <image:title>Rafting Tim Kecil vs Rafting Sekantor: Mana yang Lebih Cocok buat Budget Terbatas</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/blog/vendor-outbound-batu-malang-2026-fasilitas-all-in-lengkap-hemat.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/paket-all-in-outbound-batu-malang.webp</image:loc>
+      <image:title>Vendor Outbound Batu Malang 2026: Fasilitas All-In Lengkap dan Hemat untuk Event Perusahaan</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/blog/paket-ldks-batu-malang-premium.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/ldks-batu-malang-formasi-barisan1.webp</image:loc>
+      <image:title>Paket LDKS Batu Malang Premium: Program Pelatihan Kedisiplinan Siswa Semi Militer Aman</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/blog/outbound-offroad-batu-malang.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/img-outbound-adventure.webp</image:loc>
+      <image:title>Outbound Offroad Batu Malang, Sensasi Jelajah Hutan dengan Jeep Menantang Adrenalin</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/blog/pilihan-paket-wisata-rafting-terbaik-untuk-rombongan.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/paket-rafting-keluarga.webp</image:loc>
+      <image:title>Pilihan Paket Wisata Rafting Terbaik untuk Mengisi Agenda Weekend Rombongan</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/blog/jasa-provider-arung-jeram-corporate-gathering.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/River-rafting-adventure-under-the-waterfall.webp</image:loc>
+      <image:title>Jasa Provider Arung Jeram Profesional untuk Event Corporate Gathering</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/blog/rafting-tim-kecil-kantor.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/rafting-tim-kecil-disivi-kantor.webp</image:loc>
+      <image:title>Rafting Tim Kecil Kantor: Solusi Mini-Squad HR 2026</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/blog/rafting-per-divisi-kantor.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/rafting-per-divisi-hybrid-kantor.webp</image:loc>
+      <image:title>Rafting Per Divisi: Solusi Kantor Anti Ribet Ngumpulin</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/blog/minimal-peserta-rafting-kantor.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://gemilangkatunoutbound.web.id/assets/images/kapasitas-perahu-rafting-kantor.webp</image:loc>
+      <image:title>Minimal Berapa Orang Buat Booking Rafting Kantor? Ini Jawabannya</image:title>
+    </image:image>
   </url>
 
 </urlset>
